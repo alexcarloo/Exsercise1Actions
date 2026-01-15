@@ -19,7 +19,7 @@ jobs:
       run: ./main
 
   name: windows
-    runs-on: windows-latest
+  runs-on: windows-latest
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -35,7 +35,7 @@ jobs:
       run: .\main.exe
 
   name: macos
-    runs-on: macos-latest
+  runs-on: macos-latest
     - name: Checkout code
     uses: actions/checkout@v4
 
@@ -51,7 +51,7 @@ jobs:
       run: ./main
 
   name: cross-compile
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     needs: [ubuntu, windowa, macos]
     steps:
       - name: Checkout code
